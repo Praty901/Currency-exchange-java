@@ -1,0 +1,40 @@
+import javax.swing.JOptionPane;
+
+public class currency {
+    public static void main(String[] args) {
+        double IND=1;
+        double USD=83.61;
+        double EURO=93.26;
+        double YEN=0.58;
+        double currencyex=0.0;
+ 
+    String myCurrency = JOptionPane.showInputDialog("Choose the currency you have.\n1.USD \n2.IND \n3.EURO \n4.YEN");
+    String uCurrency = JOptionPane.showInputDialog("Choose the currency you want.\n1.DOLLAR \n2.IND \n3.EURO \n4.YEN");
+    myCurrency=myCurrency.toUpperCase();
+    uCurrency=uCurrency.toUpperCase();
+     double ammount=Double.parseDouble(JOptionPane.showInputDialog("Enter the amount you want to exchange"));
+     if(myCurrency.equals("IND")) 
+        currencyex=ammount*IND;
+        else if(myCurrency.equals("USD"))
+        currencyex=ammount*USD;
+        else if(myCurrency.equals("EURO"))
+        currencyex=ammount*EURO;
+        else if(myCurrency.equals("YEN"))
+        currencyex=ammount*YEN;
+        else
+            JOptionPane.showMessageDialog(null, "Invalid currency");
+        
+            if(uCurrency.equals("IND")) 
+            currencyex=currencyex/IND;
+            else if(uCurrency.equals("USD"))
+            currencyex=currencyex/USD;
+            else if(uCurrency.equals("EURO"))
+            currencyex=currencyex/EURO;
+            else if(uCurrency.equals("YEN"))
+            currencyex=currencyex/YEN;
+            else
+                JOptionPane.showMessageDialog(null, "Invalid currency");
+    
+    JOptionPane.showMessageDialog(null,currencyex);
+    }
+}
